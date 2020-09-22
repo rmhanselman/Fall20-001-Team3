@@ -2,4 +2,4 @@ language: cpp
 
 script:
   - g++ functions_to_implement.cpp
-  - ./a.out
+  - /a.out
