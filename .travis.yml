@@ -1,0 +1,3 @@
+language: cpp
+
+g++ funcitons_to_implement.cpp -o a.out
