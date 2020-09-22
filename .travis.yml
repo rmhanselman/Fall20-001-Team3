@@ -1,3 +1,5 @@
 language: cpp
 
-g++ main.cpp -o a.out
+script:
+  -g++ main.cpp -o a.out
+  -./a.out
