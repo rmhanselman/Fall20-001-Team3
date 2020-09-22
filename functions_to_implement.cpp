@@ -26,7 +26,7 @@ int RemoveTwos(int original){
     	{
         	original = original % 2;
     	}
-
+	return 0;
 }
 
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
