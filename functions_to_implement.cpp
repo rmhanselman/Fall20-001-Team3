@@ -1,3 +1,4 @@
+#include <vector>
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
