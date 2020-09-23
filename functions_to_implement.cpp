@@ -24,9 +24,9 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
 int RemoveTwos(int original){
 	while (original % 2 != 1)
     	{
-        	original = original % 2;
+        	original = original / 2;
     	}
-	return 0;
+	return original;
 }
 
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
@@ -58,21 +58,42 @@ std::vector<int> VectorTimesN(std::vector<int> v, int n);
 
 // takes in two integers and returns a vector of size n with
 // values n*1, n*2, n*3... up to n*m
-std::vector<int> Multiples(int n, int m);
+std::vector<int> Multiples(int n, int m){
+    std::vector<int> v;
+    for(int i = 1; i < m+1; i++){
+        v.push_back(n*i);
+    }
+    return v;
+}
 
 // takes an integer n that is >= 0 and returns a vector of all squares up to n^n (1^1, 2^2, 3^3, .... n^n)
 std::vector<int> SquaresUntil(int n);
 
 // takes an int, n, and returns the nth value of the fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...)
-int NthFibonacci(int n);
+int NthFibonacci(int n){
+    if (n <= 1){
+        return 1;
+    }
+    else{
+        return NthFibonacci(n-1) + NthFibonacci(n-2);
+    }
+}
 
 // takes an int, n, and returns the factorial of that int (n!)
-int Factorial(int n);
+int Factorial(int n){
+    if(n == 0){
+        return 1;
+    }
+    else{
+        return n * Factorial(n-1);
+    }
+}
+
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num)
-{
-	return num*-1;
+int Sign(int num){
+    if( num < 0) return -1;
+    return 1;
 }
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
